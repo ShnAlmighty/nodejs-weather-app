@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 const app = express();
-
+const port = process.env.PORT || 3000;
 const public1= path.join(__dirname,'../public');
 const path1 = path.join(__dirname,'../templates/views');
 const path2 = path.join(__dirname,'../templates/partials');
@@ -108,6 +108,6 @@ app.get('*',(req,res)=>{
         name:"Shantanu"
     });
 });
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server started on port 3000');
 });
