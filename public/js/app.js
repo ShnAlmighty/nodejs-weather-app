@@ -15,11 +15,12 @@ form.addEventListener("submit",(e)=>{
                 msg1.textContent=data.error;
             }else{
                 msg1.innerHTML=`Location:${data.Location}`;
-                msg2.innerHTML=`Current<br>Temperature:${data.Temperature}<br>Humidity:${data.Humidity}<br>Weather:${data.Weather}`;
+                msg2.innerHTML=`Current<br>Temperature:${data.Temperature}<br>Humidity:${data.Humidity}<br>Weather:${data.Weather}<br>Wind_speed:${data.Windspeed}`;
                 console.log("Location:"+data.Location);
                 console.log("Temperature:"+data.Temperature);
                 console.log("Humidity:"+data.Humidity);
                 console.log("Weather:"+data.Weather);
+                console.log("Wind_speed:"+data.Windspeed);
             }
     });
     });  

@@ -42,6 +42,7 @@ app.get('/help',(req,res)=>{
         foot:'Help Page Footer'
     });
 });
+
 //Not going to run as use is overriding it with index.html
 // app.get('/',(req,res)=>{
 //     res.send();
@@ -61,7 +62,7 @@ app.get('/weather',(req,res)=>{
                 error:err
             });
         }else{
-            forecast(latitude,longitude,(err,{temperature,humidity,weather_descriptions}={})=>{
+            forecast(latitude,longitude,(err,{temperature,humidity,weather_descriptions,wind_speed})=>{
                 if(err){
                     return res.send({
                         error:err
@@ -73,7 +74,8 @@ app.get('/weather',(req,res)=>{
                         Location:location,
                         Temperature:temperature,
                         Humidity:humidity,
-                        Weather:weather_descriptions
+                        Weather:weather_descriptions,
+                        Windspeed:wind_speed
                     });
                 }
             });
