@@ -35,11 +35,11 @@ app.get('/about',(req,res)=>{
     });
 });
 
-app.get('/help',(req,res)=>{
-    res.render('help',{
-        title:'Help section',
+app.get('/repository',(req,res)=>{
+    res.render('repository',{
+        title:'Repository Section',
         name:'Shantanu',
-        foot:'Help Page Footer'
+        foot:'Repository page Footer'
     });
 });
 
@@ -95,7 +95,7 @@ app.get('/products',(req,res)=>{
         });};
 });
 
-app.get('/help/*',(req,res)=>{
+app.get('/repository/*',(req,res)=>{
     res.render('error404',{
         pageinfo:'Help'
     });
